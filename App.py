@@ -26,11 +26,11 @@ with st.sidebar:
     elif drug_type == "Фенобарбитал (Дълъг t½)":
         def_dose, def_msc, def_mec, def_kel, def_vd = 100.0, 40.0, 15.0, 0.007, 40
     elif drug_type == "Алкохол (0-ред елиминиране)":
-        def_dose, def_msc, def_mec, def_kel, def_vd = 20000.0, 500.0, 200.0, 0.1, 40
+        def_dose, def_msc, def_mec, def_kel, def_vd = 10000.0, 500.0, 200.0, 0.1, 40
     else:
         def_dose, def_msc, def_mec, def_kel, def_vd = 500.0, 40.0, 10.0, 0.2, 25
 
-    dose = st.slider("Единична доза (mg)", 0.1, 30000.0, float(def_dose))
+    dose = st.slider("Единична доза (mg)", 0.1, 5000.0, float(def_dose), 50.0)
     interval = st.slider("Интервал между дозите (h)", 2, 48, 12)
     num_doses = st.slider("Брой дози", 1, 15, 5)
     
